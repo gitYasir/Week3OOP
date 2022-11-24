@@ -36,6 +36,10 @@
             //Point3D pt3D = new Point3D( 5, 8, 2 );
             //DemoMethod( pt3D, john );
 
+            Hunter yasir = new Hunter( "Yasir", "Ibrahim", "Nikon" ) { Age = 29 };
+            Console.WriteLine( yasir.Age );
+            Console.WriteLine( yasir.Shoot() );
+
         }
     }
 }

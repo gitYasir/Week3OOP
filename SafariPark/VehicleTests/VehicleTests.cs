@@ -16,7 +16,7 @@ namespace VehicleTests {
 
         [Test]
         public void Given() {
-            Vehicle v = new Vehicle( 5, 12 ); var result = v.Position; Assert.That( 12, Is.EqualTo( result ) );
+            Vehicle v = new Vehicle( 5, 12 ) { Speed = 10 }; var result = v.Position; Assert.That( 12, Is.EqualTo( result ) );
         }
 
     }
