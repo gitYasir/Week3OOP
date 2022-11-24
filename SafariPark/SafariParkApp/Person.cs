@@ -28,6 +28,9 @@
             FirstName = firstName;
         }
 
+        public Person() {
+        }
+
         public Person( string firstName, string lastName, int age ) {
             FirstName = firstName;
             LastName = lastName;
