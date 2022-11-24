@@ -6,17 +6,24 @@ namespace VehicleTests {
 
         [Test]
         public void WhenAVehicleWithSpeed40IsMovedOnceItsPositionIs40() {
-            Vehicle v = new Vehicle( 5, 40 ); var result = v.Move(); Assert.AreEqual( 40, v.Position ); Assert.AreEqual( "Moving along", result );
+            Vehicle v = new Vehicle( 5, 40 );
+            var result = v.Move();
+            Assert.AreEqual( 40, v.Position );
+            Assert.AreEqual( "Moving along", result );
         }
 
         [Test]
         public void GivenOnlyCapacity_Speed_ShoulBe10() {
-            Vehicle v = new Vehicle( 5 ); var result = v.Speed; Assert.That( 10, Is.EqualTo( result ) );
+            Vehicle v = new Vehicle( 5 );
+            var result = v.Speed;
+            Assert.That( 10, Is.EqualTo( result ) );
         }
 
         [Test]
-        public void Given() {
-            Vehicle v = new Vehicle( 5, 12 ) { Speed = 10 }; var result = v.Position; Assert.That( 12, Is.EqualTo( result ) );
+        public void WhenADefaultVehicleDoesNotMovesItsPositionIs10() {
+            Vehicle v = new Vehicle();
+            var result = v.Position;
+            Assert.That( 0, Is.EqualTo( result ) );
         }
 
     }
