@@ -10,6 +10,10 @@
             yasir.Age = 30;
             Console.WriteLine( $"Yasir is actually {yasir.Age}." );
 
+            var steve = new Person( "Steve" ) { Age = 30 };
+
+            var list = new ShoppingList() { Bread = 2, Potato = 3, Milk = 4 };
+            Console.WriteLine( list[ 0 ] );
         }
     }
 }

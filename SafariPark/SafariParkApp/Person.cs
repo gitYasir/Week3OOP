@@ -1,12 +1,10 @@
 ﻿namespace SafariParkApp {
     public class Person {
-        private string _firstName = "";
-        private string _lastName = "";
+        //public readonly string _firstName = "";
+        //private string _lastName = "";
         private int _age;
 
-        public Person( string firstName ) {
-            _firstName = firstName;
-        }
+
         public int Age {
             get {
                 return _age;
@@ -19,13 +17,23 @@
             }
         }
 
+        public string FirstName {
+            get; init;
+        } = "";
+        public string LastName {
+            get; init;
+        } = "";
+
+        public Person( string firstName ) {
+            FirstName = firstName;
+        }
+
         public Person( string firstName, string lastName, int age ) {
-            _firstName = firstName;
-            _lastName = lastName;
+            FirstName = firstName;
+            LastName = lastName;
             Age = age;
         }
 
-
-        public string FullName => $"{_firstName} {_lastName}";
+        public string FullName => $"{FirstName} {LastName}";
     }
 }
