@@ -90,15 +90,26 @@
             //}
             //Console.WriteLine();
 
-            Console.WriteLine( "LinkedList of people" );
-            LinkedList<Person> thePeopleLinked = new LinkedList<Person>();
-            thePeopleLinked.AddFirst( helen );
-            thePeopleLinked.AddLast( will );
-            thePeopleLinked.AddLast( new Person { FirstName = "Linda", LastName = "Smith", Age = 45 } );
+            //Console.WriteLine( "LinkedList of people" );
+            //LinkedList<Person> thePeopleLinked = new LinkedList<Person>();
+            //thePeopleLinked.AddFirst( helen );
+            //thePeopleLinked.AddLast( will );
+            //thePeopleLinked.AddLast( new Person { FirstName = "Linda", LastName = "Smith", Age = 45 } );
 
-            foreach ( var person in thePeopleLinked ) {
-                Console.WriteLine( person );
+            //foreach ( var person in thePeopleLinked ) {
+            //    Console.WriteLine( person );
+            //}
+
+            var myQueue = new Queue<Person>();
+            myQueue.Enqueue( helen );
+            myQueue.Enqueue( will );
+            myQueue.Enqueue( new Person( "Cathy" ) );
+            Console.WriteLine( "\nQueue" );
+            foreach ( var q in myQueue ) {
+                Console.WriteLine( q );
             }
+            var first = myQueue.Peek();
+            var serve = myQueue.Dequeue();
 
             #endregion
         }

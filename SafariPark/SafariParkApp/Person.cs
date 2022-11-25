@@ -21,7 +21,7 @@
         private string _lastName;
 
         public Person( string firstName ) {
-            _firstName = firstName;
+            FirstName = firstName;
         }
         public Person() {
         }
