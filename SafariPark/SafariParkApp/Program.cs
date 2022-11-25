@@ -1,6 +1,8 @@
 ﻿namespace SafariParkApp {
     internal class Program {
         static void Main( string[] args ) {
+            #region inheritance
+
             /*            Person yasir = new Person( "Yasir", "Ibrahim", 29 );
                         Console.WriteLine( yasir.FullName );
 
@@ -51,15 +53,22 @@
             //var p = new Person( "A", "B", 22 );
             //Console.WriteLine( p.ToString() );
 
-            var prac = new Airplane( 200, 100, "JetsRUs" ) { NumPassengers = 150 };
-            prac.Ascend( 500 );
-            Console.WriteLine( prac.Move( 3 ) );
-            Console.WriteLine( prac );
-            prac.Descend( 200 );
-            Console.WriteLine( prac.Move() );
-            prac.Move();
-            Console.WriteLine( prac );
+            //var prac = new Airplane( 200, 100, "JetsRUs" ) { NumPassengers = 150 };
+            //prac.Ascend( 500 );
+            //Console.WriteLine( prac.Move( 3 ) );
+            //Console.WriteLine( prac );
+            //prac.Descend( 200 );
+            //Console.WriteLine( prac.Move() );
+            //prac.Move();
+            //Console.WriteLine( prac );
 
+            #endregion
+
+            #region collections 
+
+
+
+            #endregion
         }
     }
 }
