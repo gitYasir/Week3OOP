@@ -66,8 +66,8 @@
 
             #region collections 
 
-            //var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
-            //var will = new Hunter { FirstName = "William", LastName = "Shakespeare", Age = 457 };
+            var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
+            var will = new Hunter { FirstName = "William", LastName = "Shakespeare", Age = 457 };
             //Console.WriteLine( "List of people" );
             //List<Person> thePeople = new List<Person> { helen, will };
 
@@ -77,18 +77,29 @@
             //}
             //Console.WriteLine();
 
-            List<int> list = new List<int> { 5, 4, 3, 9, 0 };
-            list.Add( 8 );
-            list.Sort();
-            list.RemoveRange( 1, 2 );
-            list.Insert( 2, 1 );
-            list.Reverse();
-            list.Remove( 9 );
+            //List<int> list = new List<int> { 5, 4, 3, 9, 0 };
+            //list.Add( 8 );
+            //list.Sort();
+            //list.RemoveRange( 1, 2 );
+            //list.Insert( 2, 1 );
+            //list.Reverse();
+            //list.Remove( 9 );
 
-            foreach ( var item in list ) {
-                Console.Write( item + " " );
+            //foreach ( var item in list ) {
+            //    Console.Write( item + " " );
+            //}
+            //Console.WriteLine();
+
+            Console.WriteLine( "LinkedList of people" );
+            LinkedList<Person> thePeopleLinked = new LinkedList<Person>();
+            thePeopleLinked.AddFirst( helen );
+            thePeopleLinked.AddLast( will );
+            thePeopleLinked.AddLast( new Person { FirstName = "Linda", LastName = "Smith", Age = 45 } );
+
+            foreach ( var person in thePeopleLinked ) {
+                Console.WriteLine( person );
             }
-            Console.WriteLine();
+
             #endregion
         }
     }
