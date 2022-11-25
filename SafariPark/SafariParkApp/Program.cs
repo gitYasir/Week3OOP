@@ -100,16 +100,34 @@
             //    Console.WriteLine( person );
             //}
 
-            var myQueue = new Queue<Person>();
-            myQueue.Enqueue( helen );
-            myQueue.Enqueue( will );
-            myQueue.Enqueue( new Person( "Cathy" ) );
-            Console.WriteLine( "\nQueue" );
-            foreach ( var q in myQueue ) {
-                Console.WriteLine( q );
+            //var myQueue = new Queue<Person>();
+            //myQueue.Enqueue( helen );
+            //myQueue.Enqueue( will );
+            //myQueue.Enqueue( new Person( "Cathy" ) );
+            //Console.WriteLine( "\nQueue" );
+            //foreach ( var q in myQueue ) {
+            //    Console.WriteLine( q );
+            //}
+            //var first = myQueue.Peek();
+            //var serve = myQueue.Dequeue();
+
+            int[] original = new int[] { 1, 2, 3, 4, 5 };
+            int[] reversed = new int[ original.Length ];
+            var stack = new Stack<int>();
+            foreach ( var n in original ) {
+                stack.Push( n );
             }
-            var first = myQueue.Peek();
-            var serve = myQueue.Dequeue();
+            // write out the stackConsole.WriteLine("\nStack");
+            foreach ( var s in stack ) {
+                Console.WriteLine( s );
+            }
+
+            for ( int i = 0; i < original.Length; i++ ) {
+                reversed[ i ] = stack.Pop();
+            }
+            foreach ( var s in reversed ) {
+                Console.WriteLine( s );
+            }
 
             #endregion
         }
