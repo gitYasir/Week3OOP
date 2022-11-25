@@ -21,11 +21,11 @@
 
         public string Move() {
             Position += Speed;
-            return $"Moving along at an altitude of {Altitude} metres.";
+            return base.Move() + $" at an altitude of {Altitude} metres.";
         }
         public string Move( int times ) {
             Position += Speed * times;
-            return $"Moving along {times} times at an altitude of {Altitude} metres.";
+            return base.Move( times ) + $" at an altitude of {Altitude} metres.";
         }
 
         public override string ToString() {

@@ -60,7 +60,6 @@
             prac.Move();
             Console.WriteLine( prac );
 
-
         }
     }
 }
