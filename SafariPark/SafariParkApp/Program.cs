@@ -143,30 +143,30 @@
             //    Console.WriteLine( el );
             //}
 
-            string input = "The cat in the hat comes back";
-            input = input.Trim().ToLower();
-            var countDict = new Dictionary<char, int>();
-            foreach ( var c in input ) {
-                if ( countDict.ContainsKey( c ) ) {
-                    countDict[ c ]++;
-                }
-                else {
-                    countDict.Add( c, 1 );
-                }
-            }
-            Console.WriteLine( "Dictionary problem" );
-            foreach ( var entry in countDict ) {
-                Console.WriteLine( entry );
-            }
+            //string input = "The cat in the hat comes back";
+            //input = input.Trim().ToLower();
+            //var countDict = new Dictionary<char, int>();
+            //foreach ( var c in input ) {
+            //    if ( countDict.ContainsKey( c ) ) {
+            //        countDict[ c ]++;
+            //    }
+            //    else {
+            //        countDict.Add( c, 1 );
+            //    }
+            //}
+            //Console.WriteLine( "Dictionary problem" );
+            //foreach ( var entry in countDict ) {
+            //    Console.WriteLine( entry );
+            //}
 
-            Console.WriteLine( "\nKeys" );
-            foreach ( var key in countDict.Keys ) {
-                Console.Write( key + " " );
-            }
-            Console.WriteLine( "\nValues" );
-            foreach ( var value in countDict.Values ) {
-                Console.Write( value + " " );
-            }
+            //Console.WriteLine( "\nKeys" );
+            //foreach ( var key in countDict.Keys ) {
+            //    Console.Write( key + " " );
+            //}
+            //Console.WriteLine( "\nValues" );
+            //foreach ( var value in countDict.Values ) {
+            //    Console.Write( value + " " );
+            //}
 
             #endregion
         }
