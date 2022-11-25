@@ -66,8 +66,29 @@
 
             #region collections 
 
+            //var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
+            //var will = new Hunter { FirstName = "William", LastName = "Shakespeare", Age = 457 };
+            //Console.WriteLine( "List of people" );
+            //List<Person> thePeople = new List<Person> { helen, will };
 
 
+            //foreach ( var person in thePeople ) {
+            //    Console.WriteLine( person );
+            //}
+            //Console.WriteLine();
+
+            List<int> list = new List<int> { 5, 4, 3, 9, 0 };
+            list.Add( 8 );
+            list.Sort();
+            list.RemoveRange( 1, 2 );
+            list.Insert( 2, 1 );
+            list.Reverse();
+            list.Remove( 9 );
+
+            foreach ( var item in list ) {
+                Console.Write( item + " " );
+            }
+            Console.WriteLine();
             #endregion
         }
     }

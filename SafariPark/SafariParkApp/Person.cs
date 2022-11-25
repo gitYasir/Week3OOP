@@ -14,6 +14,9 @@
             }
         }
 
+        public string FirstName { get; internal set; }
+        public string LastName { get; internal set; }
+
         private string _firstName;
         private string _lastName;
 
@@ -29,7 +32,7 @@
             Age = age;
         }
 
-        public string GetFullName() => $"{_firstName} {_lastName}";
+        public string GetFullName() => $"{FirstName} {LastName}";
 
         public override string ToString() {
             return $"{base.ToString()} Name: {GetFullName()} Age: {Age}";
