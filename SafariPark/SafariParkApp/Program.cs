@@ -111,22 +111,61 @@
             //var first = myQueue.Peek();
             //var serve = myQueue.Dequeue();
 
-            int[] original = new int[] { 1, 2, 3, 4, 5 };
-            int[] reversed = new int[ original.Length ];
-            var stack = new Stack<int>();
-            foreach ( var n in original ) {
-                stack.Push( n );
+            //int[] original = new int[] { 1, 2, 3, 4, 5 };
+            //int[] reversed = new int[ original.Length ];
+            //var stack = new Stack<int>();
+            //foreach ( var n in original ) {
+            //    stack.Push( n );
+            //}
+            //// write out the stackConsole.WriteLine("\nStack");
+            //foreach ( var s in stack ) {
+            //    Console.WriteLine( s );
+            //}
+
+            //for ( int i = 0; i < original.Length; i++ ) {
+            //    reversed[ i ] = stack.Pop();
+            //}
+            //foreach ( var s in reversed ) {
+            //    Console.WriteLine( s );
+            //}
+
+            //var theBeatles = new Dictionary<int, string>() { { 2, "Paul" }, { 3, "Ringo" }, { 1, "John" }, { 4, "George" } };
+            //var isAdded = theBeatles.TryAdd( 3, "Laura" );
+            //var isAdded1 = theBeatles.TryAdd( 5, "Laura" );
+            //var beatlesList = theBeatles.Values.ToList();
+            //var c = theBeatles.Remove( 1 );
+            //var d = theBeatles.Keys.Where( x => x % 2 == 0 ).Sum();
+
+            //Console.WriteLine( isAdded );
+            //Console.WriteLine( isAdded1 );
+
+            //foreach ( var el in beatlesList ) {
+            //    Console.WriteLine( el );
+            //}
+
+            string input = "The cat in the hat comes back";
+            input = input.Trim().ToLower();
+            var countDict = new Dictionary<char, int>();
+            foreach ( var c in input ) {
+                if ( countDict.ContainsKey( c ) ) {
+                    countDict[ c ]++;
+                }
+                else {
+                    countDict.Add( c, 1 );
+                }
             }
-            // write out the stackConsole.WriteLine("\nStack");
-            foreach ( var s in stack ) {
-                Console.WriteLine( s );
+            Console.WriteLine( "Dictionary problem" );
+            foreach ( var entry in countDict ) {
+                Console.WriteLine( entry );
             }
 
-            for ( int i = 0; i < original.Length; i++ ) {
-                reversed[ i ] = stack.Pop();
+            Console.WriteLine( "\nKeys" );
+            foreach ( var key in countDict.Keys ) {
+                Console.Write( key + " " );
             }
-            foreach ( var s in reversed ) {
-                Console.WriteLine( s );
+            Console.WriteLine( "\nValues" );
+            foreach ( var value in countDict.Values ) {
+                Console.Write( value + " " );
             }
 
             #endregion
