@@ -66,8 +66,8 @@
 
             #region collections 
 
-            var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
-            var will = new Hunter { FirstName = "William", LastName = "Shakespeare", Age = 457 };
+            //var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
+            //var will = new Hunter { FirstName = "William", LastName = "Shakespeare", Age = 457 };
             //Console.WriteLine( "List of people" );
             //List<Person> thePeople = new List<Person> { helen, will };
 
