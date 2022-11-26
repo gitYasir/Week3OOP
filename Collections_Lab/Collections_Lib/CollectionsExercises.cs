@@ -6,11 +6,15 @@ namespace Collections_Lib {
 
         /* removes and returns the next num entries in the queue, as a comma separated string */
         public static string NextInQueue( int num, Queue<string> queue ) {
-            var content = "";
-            foreach ( var item in queue ) {
-
+            var list = new List<string>();
+            if ( num > queue.Count ) {
+                num = queue.Count;
             }
-            throw new NotImplementedException();
+            for ( int i = 0; i < num; i++ ) {
+                //content += $"{queue.Dequeue()}";
+                list.Add( queue.Dequeue() );
+            }
+            return string.Join( ", ", list );
         }
 
         /* uses a Stack to create and return array of ints in reverse order to the one supplied */
