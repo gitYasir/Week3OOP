@@ -11,9 +11,12 @@ namespace PlayingBanjoTests {
             Assert.That( Program.IsPersonPlayingBanjo( name ), Is.EqualTo( expected ) );
         }
 
-        [TestCase( "Rick", "Martin is playing the banjo." )]
-        [TestCase( "Rob", "Martin is playing the banjo." )]
-        [TestCase( "Rice", "Martin is playing the banjo." )]
+        [TestCase( "Rick", "Rick is playing the banjo." )]
+        [TestCase( "rick", "rick is playing the banjo." )]
+        [TestCase( "Rob", "Rob is playing the banjo." )]
+        [TestCase( "rob", "rob is playing the banjo." )]
+        [TestCase( "Rice", "Rice is playing the banjo." )]
+        [TestCase( "rice", "rice is playing the banjo." )]
         public void GivenNameStartingWithR_IsPersonPlayingBanjo_ReturnsCorrectString( string name, string expected ) {
             Assert.That( Program.IsPersonPlayingBanjo( name ), Is.EqualTo( expected ) );
         }

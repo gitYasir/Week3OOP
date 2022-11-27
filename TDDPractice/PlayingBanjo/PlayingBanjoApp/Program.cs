@@ -5,7 +5,13 @@
         }
 
         public static string IsPersonPlayingBanjo( string name ) {
-            return "";
+            if ( name.StartsWith( "R" ) || name.StartsWith( "r" ) ) {
+                return $"{name} is playing the banjo.";
+            }
+            else {
+                return $"{name} is not playing the banjo.";
+
+            }
         }
 
     }
