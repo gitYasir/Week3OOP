@@ -1,5 +1,5 @@
 ﻿namespace SafariParkApp {
-    public class Vehicle {
+    public class Vehicle : IMovable {
         protected int _capacity;
         private int _numPassengers;
 

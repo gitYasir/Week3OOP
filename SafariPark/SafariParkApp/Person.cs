@@ -1,5 +1,5 @@
 ﻿namespace SafariParkApp {
-    public class Person {
+    public class Person : IMovable {
         private int _age;
 
         public int Age {
@@ -32,7 +32,15 @@
             Age = age;
         }
 
-        public string GetFullName() => $"{FirstName} {LastName}";
+        public string GetFullName() => $"{_firstName} {_lastName}";
+
+        public virtual string Move() {
+            return "Moving along";
+        }
+
+        public virtual string Move( int times ) {
+            return $"Moving along {times} times";
+        }
 
         public override string ToString() {
             return $"{base.ToString()} Name: {GetFullName()} Age: {Age}";
