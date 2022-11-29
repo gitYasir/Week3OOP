@@ -180,6 +180,7 @@
 //    }
 //}
 #endregion
+#region polymorphic shootout
 
 //List<Object> gameObjects = new List<Object>()
 //{
@@ -218,18 +219,71 @@
 //    Console.WriteLine( obj.Move( 2 ) );
 //}
 
-var list = new List<IShootable>() {
-    new LaserGun( "Laser" ) ,
-    new WaterPistol( "Water" ),
-    new Hunter( "Hunter", "Biden", new LaserGun( "Laser2" ) ),
-    new Hunter( "Hunter", "Biden", new WaterPistol( "Water2" ) ),
-    new Hunter( "Hunter", "Biden", new Camera( "Camera" ) ),
-    new Camera ("Nikon")
-};
+//var list = new List<IShootable>() {
+//    new LaserGun( "Laser" ) ,
+//    new WaterPistol( "Water" ),
+//    new Hunter( "Hunter", "Biden", new LaserGun( "Laser2" ) ),
+//    new Hunter( "Hunter", "Biden", new WaterPistol( "Water2" ) ),
+//    new Hunter( "Hunter", "Biden", new Camera( "Camera" ) ),
+//    new Camera ("Nikon")
+//};
 
-foreach ( IShootable shootable in list ) {
-    Console.WriteLine( shootable.Shoot() );
+//foreach ( IShootable shootable in list ) {
+//    Console.WriteLine( shootable.Shoot() );
+//}
+#endregion
+#region hashes and equals
+//var bobOne = new Person( "Bob", "Builder" ) { Age = 25 };
+//var bobTwo = bobOne;
+//var areSame = bobOne.Equals( bobTwo ); // true
+
+//Console.WriteLine( areSame );
+
+//var bobThree = new Person( "Bob", "Builder" ) { Age = 25 };
+//var areAlsoSame = bobOne.Equals( bobThree );
+//Console.WriteLine( areAlsoSame );  // false
+
+
+//var bobFour = new Person( "Bob", "Baker" ) { Age = 32 };
+
+//var equals = bobOne == bobThree;  // should be true
+//var notEquals = bobOne != bobThree; // should be false
+
+//List<Person> personList = new List<Person> { bobOne, (Person)bobTwo, bobThree, bobFour
+//};
+
+//personList.Sort();
+
+//Console.WriteLine( personList );
+#endregion
+
+var helen = new Person { FirstName = "Helen", LastName = "Troy", Age = 22 };
+
+var peopleSet = new HashSet<Person>
+{   helen,
+    new Person("Jasmine", "Carter"),
+    new Person("Andrei", "Masters")
+};
+var successMartin = peopleSet.Add(
+    new Person {
+        FirstName = "Martin",
+        LastName = "Beard"
+    } );
+var successHelen = peopleSet.Add(
+    new Person {
+        FirstName = "Helen",
+        LastName = "Troy",
+        Age = 22
+    } );
+Console.WriteLine( "HashSet" );
+foreach ( var entry in peopleSet ) {
+    Console.WriteLine( entry );
 }
 
+var morePeople = new HashSet<Person>{
+        new Person("Cathy", "French"),
+        new Person("Jasmine", "Carter")
+    };
+peopleSet.IntersectWith( morePeople );
 
-
+Console.WriteLine();
